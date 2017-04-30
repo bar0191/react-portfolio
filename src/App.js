@@ -328,7 +328,9 @@ class App extends React.Component {
 				          <a href="#">
 				          	<Button className="btn-fab" size="lg"><FaExternalLink size="26" color="#336B87"/></Button>
 				          </a>
-				          <Button className="btn-fab" size="lg"><FaGithub size="26" color="#336B87"/></Button>
+				          <a href="https://github.com/bar0191/react-portfolio">
+				          	<Button className="btn-fab" size="lg"><FaGithub size="26" color="#336B87"/></Button>
+				          </a>
 				        </CardBlock>
 				      </Card>
 		   		</Row>	
