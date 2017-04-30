@@ -17,6 +17,8 @@ import FaLinkedin from 'react-icons/lib/fa/linkedin';
 //styles
 import './App.scss';
 
+import { particleConfig } from './particlesjs-config.js';
+
 var Scroll  = require('react-scroll');
 
 var Link       = Scroll.Link;
@@ -121,7 +123,10 @@ class App extends React.Component {
 		   	<Element name="welcome" className="element" >
           		<div className="App">
 		    	  	<div className="App-header">
-		    	  		<Particles height="80vh" width="100vh"/>
+		    	  		<Particles 
+		    	  		height="80vh" width="100vh"
+		    	  		params={particleConfig}
+		    	  		/>
 		    	  		{/*<h3 className="subTitleMiddle2">Brandon Reid</h3>*/}
 			    	  	<h1 className="display-2 titleMiddle">Junior Developer</h1>
 			    	  	<h3 className="subTitleMiddle">Welcome To My Portfolio</h3>
