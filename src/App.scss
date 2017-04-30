@@ -1,0 +1,162 @@
+@import './shared/variables';
+.App {
+  &-header {
+    background-color: #222;
+    background-image: url("images/earth_rendered.png");
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  &-intro {
+    font-size: large;
+  }
+}
+
+.aboutElement {
+  background-color: #f5fffa;
+
+  &-blockFont {
+    font-size: 26px;
+  }
+
+  &-aboutFont {
+    font-size: 22px;
+  }
+
+  &-boldFont {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.skillsElement {
+  background-color: #f5fffa;
+}
+
+.portfolioElement {
+  background-color: #f5fffa;
+}
+
+.edElement {
+  background-color: #f5fffa;
+}
+
+.contactElement {
+  background-color: #f5fffa;
+  background-image: url("images/rendered.png");
+  height: 100vh;
+}
+
+.cardSize {
+  height: 550px;
+  width: 400px;
+}
+
+.edCardSize {
+  height: 350px;
+  width: 300px;
+}
+
+.Title {
+  &-header {
+    background-color: #336B87;
+    height: 100px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+  }
+
+  &-intro {
+    font-size: large;
+  }
+
+  &-titleMiddle {
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%); 
+  }
+}
+
+.configs {
+  li {
+    margin: 15px 0px;
+  }
+}
+
+.screenFiller {
+    height: 100vh;
+}
+
+.titleMiddle {
+  position: relative;
+  top: -50%;
+  transform: translateY(-50%); 
+}
+
+.subTitleMiddle {
+  position: relative;
+  top: -52%;
+  transform: translateY(-50%); 
+}
+
+.subTitleMiddle2 {
+  position: relative;
+  top: -54%;
+  transform: translateY(-50%); 
+}
+
+.iconMiddle {
+  position: relative;
+  top: -35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.line{
+  width: 95%;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+code {
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 17px;
+  margin-right: 10px;
+  background-color: rgba(222, 222, 222, 0.34);
+  border: 1px solid #cccccc;
+  color: #868686;
+}
+
+.view {
+    .view-header, .view-content { padding: 1em 1.2rem;}
+    .view-header {
+        background: $view-header-bg;
+        margin-top: -2px;
+        padding-bottom: 4.4rem;
+    }
+    .view-content {
+        margin-top: -4.2rem;
+    }
+    .view-header .breadcrumb-item + .breadcrumb-item::before {
+        color: #fff;
+    }
+    // for full pages like signin, 404 etc.
+    .view-content.view-pages {
+       padding: 4rem;
+       margin: 0;
+       min-height: 100vh;
+    }
+}
+
+blockquote {
+     width: 90% !important;
+     padding: 5px 5px 5px 15px !important;
+     border-color: #336B87 !important;
+ }
