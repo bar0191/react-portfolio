@@ -1,3 +1,35 @@
+### React Portfolio
+
+## Install nodejs, and yarn before you continue
+
+## Production:
+
+Run yarn install to install proper dependencies
+```sh
+yarn install
+```
+Run yarn build to build static bundle
+```sh
+yarn build
+```
+
+Run yarn deploy to deploy to gitpages
+```sh
+yarn run deploy
+```
+
+## Developement:
+
+Run yarn install to install proper dependencies
+```sh
+yarn install
+```
+
+Run yarn start to start webpack bundle on localhost:3000
+```sh
+yarn start
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
