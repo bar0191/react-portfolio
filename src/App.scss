@@ -60,11 +60,19 @@
   width: 300px;
 }
 
+.nav {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+}
+
 .Title {
   &-header {
     background-color: #336B87;
     height: 100px;
     padding: 20px;
+    padding-top: 85px;
+    padding-bottom: 50px;
     color: white;
     text-align: left;
   }

@@ -1,92 +1,91 @@
-import React from 'react';
-import { StickyContainer, Sticky } from 'react-sticky';
+import React from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, 
 		 Row, Card, Button, CardImg, CardTitle, CardText,
- 		 CardSubtitle, CardBlock, CardGroup } from 'reactstrap';
-import Particles from 'react-particles-js';
-import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
-import FaUser from 'react-icons/lib/fa/user';
-import FaCode from 'react-icons/lib/fa/code';
-import FaBlackTie from 'react-icons/lib/fa/black-tie';
-import FaExternalLink from 'react-icons/lib/fa/external-link';
-import FaGithub from 'react-icons/lib/fa/github';
-import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
-import FaEnvelopeO from 'react-icons/lib/fa/envelope-o';
-import FaLinkedin from 'react-icons/lib/fa/linkedin';
+ 		 CardSubtitle, CardBlock, CardGroup } from 'reactstrap'
+import Particles from 'react-particles-js'
+import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down'
+import FaUser from 'react-icons/lib/fa/user'
+import FaCode from 'react-icons/lib/fa/code'
+import FaBlackTie from 'react-icons/lib/fa/black-tie'
+import FaExternalLink from 'react-icons/lib/fa/external-link'
+import FaGithub from 'react-icons/lib/fa/github'
+import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
+import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
+import FaLinkedin from 'react-icons/lib/fa/linkedin'
 
 //styles
-import './App.scss';
+import './App.scss'
 
-import { particleConfig } from './particlesjs-config.js';
+import { particleConfig } from './particlesjs-config.js'
 
-var Scroll  = require('react-scroll');
+var Scroll  = require('react-scroll')
 
-var Link       = Scroll.Link;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+var Link       = Scroll.Link
+var Element    = Scroll.Element
+var Events     = Scroll.Events
+var scroll     = Scroll.animateScroll
+var scrollSpy  = Scroll.scrollSpy
 
 class App extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 
-    	this.toggle = this.toggle.bind(this);
+    	this.toggle = this.toggle.bind(this)
     	this.state = {
     	  isOpen: false
-    	};
+    	}
   	}
 
   	componentDidMount() {
 
     	Events.scrollEvent.register('begin', function(to, element) {
-    	  console.log("begin", arguments);
-    	});
+    	  console.log("begin", arguments)
+    	})
 
     	Events.scrollEvent.register('end', function(to, element) {
-      		console.log("end", arguments);
-    	});
+      		console.log("end", arguments)
+    	})
 
-    	scrollSpy.update();
+    	scrollSpy.update()
   	}
 
   	componentWillUnmount() {
-    	Events.scrollEvent.remove('begin');
-    	Events.scrollEvent.remove('end');
+    	Events.scrollEvent.remove('begin')
+    	Events.scrollEvent.remove('end')
   	}
 
   	scrollToTop() {
-    	scroll.scrollToTop();
+    	scroll.scrollToTop()
   	}
 
   	scrollToBottom() {
-  	  scroll.scrollToBottom();
+  	  scroll.scrollToBottom()
   	}
 
   	scrollTo() {
-  	  scroll.scrollTo(100);
+  	  scroll.scrollTo(100)
   	}
 
   	scrollMore() {
-  	  scroll.scrollMore(100);
+  	  scroll.scrollMore(100)
   	}
 
   	handleSetActive(to) {
-  	  console.log(to);
+  	  console.log(to)
   	}
 
   	toggle() {
     	this.setState({
       		isOpen: !this.state.isOpen
-    	});
+    	})
   	}
 
 	render() {
     	return (
-    	<StickyContainer>
-    		<Sticky>
-        		<div>
-				<Navbar color="faded" light toggleable>
+    	
+    		
+        <div>	
+				<Navbar fixed="top" color="faded" full toggleable>
 					<NavbarToggler right onClick={this.toggle} />
 			 		<NavbarBrand href="/">Brandon Reid</NavbarBrand>
 					<Collapse isOpen={this.state.isOpen} navbar>
@@ -117,8 +116,8 @@ class App extends React.Component {
 			   		</Nav>
 			    	</Collapse>
 				</Navbar>
-				</div>
-			</Sticky> 
+				
+		
 
 		   	<Element name="welcome" className="element" >
           		<div className="App">
@@ -413,10 +412,9 @@ class App extends React.Component {
 		   			</CardBlock>
 		   		
         	</Element>
-
-		 </StickyContainer>
+        </div>
     )
   }
 }
 
-export default App;
+export default App
