@@ -39,11 +39,11 @@ class App extends React.Component {
   	componentDidMount() {
 
     	Events.scrollEvent.register('begin', function(to, element) {
-    	  console.log("begin", arguments)
+    	  //console.log("begin", arguments)
     	})
 
     	Events.scrollEvent.register('end', function(to, element) {
-      		console.log("end", arguments)
+      		//console.log("end", arguments)
     	})
 
     	scrollSpy.update()
@@ -87,7 +87,7 @@ class App extends React.Component {
         <div>	
 				<Navbar fixed="top" color="faded" full toggleable>
 					<NavbarToggler right onClick={this.toggle} />
-			 		<NavbarBrand href="/">Brandon Reid</NavbarBrand>
+			 		<NavbarBrand href="/react-portfolio">Brandon Reid</NavbarBrand>
 					<Collapse isOpen={this.state.isOpen} navbar>
 		 			<Nav className="ml-auto" navbar>
 				 		<NavItem>
@@ -129,7 +129,7 @@ class App extends React.Component {
 		    	  		{/*<h3 className="subTitleMiddle2">Brandon Reid</h3>*/}
 			    	  	<h1 className="display-2 titleMiddle">Junior Developer</h1>
 			    	  	<h3 className="subTitleMiddle">Welcome To My Portfolio</h3>
-			    	  	<div className="iconMiddle">
+			    	  	<div className="bounce">
 			    	  		<Link activeClass="active" className="about" to="about" spy={true} smooth={true} duration={500} >
 			    	  			<FaAngleDoubleDown size="50" color="#FFF"/>
 			    	  		</Link>
