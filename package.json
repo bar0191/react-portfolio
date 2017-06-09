@@ -11,7 +11,8 @@
     "react-icons": "^2.2.3",
     "react-particles-js": "^1.5.0",
     "react-scroll": "^1.5.2",
-    "react-sticky": "^5.0.8",
+    "react-typewriter": "^0.4.1",
+    "react-typist": "^1.1.1",
     "reactstrap": "^4.5.0"
   },
   "devDependencies": {

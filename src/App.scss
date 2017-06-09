@@ -1,4 +1,5 @@
 @import './shared/variables';
+
 .App {
   &-header {
     background-color: #222;
@@ -100,13 +101,13 @@
 
 .titleMiddle {
   position: relative;
-  top: -50%;
+  top: -60%;
   transform: translateY(-50%); 
 }
 
 .subTitleMiddle {
   position: relative;
-  top: -52%;
+  top: -60%;
   transform: translateY(-50%); 
 }
 
@@ -125,8 +126,23 @@
   border-bottom: 1px solid #dcdcdc;
 }
 
+.Typist .Cursor {
+  display: inline-block; }
+  .Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+
 .bounce {
-    position:relative;
+    position:absolute;
     left:50%;
     bottom:0;
     margin-top:-150px;

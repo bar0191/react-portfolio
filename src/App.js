@@ -12,11 +12,14 @@ import FaGithub from 'react-icons/lib/fa/github'
 import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
 import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
 import FaLinkedin from 'react-icons/lib/fa/linkedin'
+import Typist from 'react-typist'
 
 //styles
 import './App.scss'
 
 import { particleConfig } from './particlesjs-config.js'
+
+//import TWHeader from './components/tw-header'
 
 var Scroll  = require('react-scroll')
 
@@ -32,14 +35,20 @@ class App extends React.Component {
 
     	this.toggle = this.toggle.bind(this)
     	this.state = {
-    	  isOpen: false
+    	  isOpen: false,
+    	  headerStrings: [
+  			"Junior Developer",
+  			"Student and Researcher",
+  			"Passionate and Hard Working"
+  			],
+    	  headerArrayPos: 0
     	}
   	}
 
   	componentDidMount() {
 
     	Events.scrollEvent.register('begin', function(to, element) {
-    	  //console.log("begin", arguments)
+    	 	//console.log("begin", arguments)
     	})
 
     	Events.scrollEvent.register('end', function(to, element) {
@@ -47,11 +56,13 @@ class App extends React.Component {
     	})
 
     	scrollSpy.update()
+    	//this.interval = setInterval(() => this.loopHeaderStrings(), 6000)
   	}
 
   	componentWillUnmount() {
     	Events.scrollEvent.remove('begin')
     	Events.scrollEvent.remove('end')
+    	//clearInterval(this.interval)
   	}
 
   	scrollToTop() {
@@ -80,10 +91,19 @@ class App extends React.Component {
     	})
   	}
 
+  	loopHeaderStrings() {
+  		if (this.state.headerArrayPos === 3) {
+  			this.setState({headerArrayPos: 0})
+  			console.log(this.state.headerArrayPos)
+  		} else {
+  			this.setState({headerArrayPos: this.state.headerArrayPos+1})
+  			console.log(this.state.headerArrayPos)
+  		}
+  	}
+
 	render() {
+
     	return (
-    	
-    		
         <div>	
 				<Navbar fixed="top" color="faded" full toggleable>
 					<NavbarToggler right onClick={this.toggle} />
@@ -123,12 +143,16 @@ class App extends React.Component {
           		<div className="App">
 		    	  	<div className="App-header">
 		    	  		<Particles 
-		    	  		height="80vh" width="100vh"
+		    	  		height="100vh" width="100vw"
 		    	  		params={particleConfig}
 		    	  		/>
 		    	  		{/*<h3 className="subTitleMiddle2">Brandon Reid</h3>*/}
-			    	  	<h1 className="display-2 titleMiddle">Junior Developer</h1>
-			    	  	<h3 className="subTitleMiddle">Welcome To My Portfolio</h3>
+		    	  		
+			    	  	<Typist className="display-2 titleMiddle">
+			    	  	{this.state.headerStrings[this.state.headerArrayPos]}
+			    	  	</Typist>
+			    	  	{/*<TWHeader className="display-2 titleMiddle" header={this.state.headerStrings[this.state.headerArrayPos]} />*/}
+			    	  	<h3 className="subTitleMiddle">Welcome to my portfolio!</h3>
 			    	  	<div className="bounce">
 			    	  		<Link activeClass="active" className="about" to="about" spy={true} smooth={true} duration={500} >
 			    	  			<FaAngleDoubleDown size="50" color="#FFF"/>
