@@ -173,12 +173,26 @@ class App extends React.Component {
 
 		   		<Card className="ml-4 mr-4 mt-4 mb-4">
 		   			<CardBlock>
+		   				<h2>Junior Developer / Code Monkey</h2>
+		   				<div className="mt-4 line"></div>
+		   				<br></br>
 		   				<blockquote className="blockquote">
-		                	<p className="mb-0 aboutElement-blockFont" >An aspiring software developer pursing a passion in full stack developement and cyber security.</p>
+		                	<p className="mb-0 aboutElement-blockFont">"When something is important enough, you do it even if the odds are not in your favor." - Elon Musk</p>
 		            	</blockquote>
-		            	<p className="mt-4 aboutElement-aboutFont">Currently pursuing a bachelors degree in Information Technology with a federal security certificate at UNT with an interest in information security, research, and software development. I am an Undergraduate research assistant in the Network Security Lab at Discovery Park in UNT. I'm Looking to gain professional connections, and seek internship opportunities in areas pertaining to full stack development and cyber security.</p>
-		            	<p className="mt-4 aboutElement-aboutFont">As a generalist, I enjoy using my keen learning abilities, and my vigorous work ethic to achieve any task or accomplish any goal. I have a joy for creating new things, and making an impact on the world around me. I'm confident in my abilities to bring something unique to a high growth company.</p>
-		            	<p className="mt-4 aboutElement-boldFont">I want to develop things that make an impact in society.</p>
+		            	<p className="mt-4 aboutElement-aboutFont">Brandon joined the LevelTen team as a summer intern in 2017. He is currently pursuing a bachelors degree in Information Technology with a security concentration at the University of North Texas, and is going on his senior year. His interests are in full stack development, cyber security, and drone technology. Brandon has lived in the DFW area all of his life, and grew up absorbed in technology. His father introduced him to an apple II at the age of 3, and his father swears he was hooked ever since.  </p>
+		            	<p className="mt-4 aboutElement-aboutFont">He has always had a passion for technology, and considers himself a generalist and futurist. In his free time, he enjoys attending hackathons, working on react.js projects, and has recently started building his first racing drone. As a generalist, Brandon enjoys using his keen learning abilities, and his vigorous work ethic to achieve any task or accomplish any goal.</p>
+		            	<br></br>
+		            	<h2>Facts you dont really need (or want) to know</h2>
+		   				<div className="mt-4 line"></div>
+		            	
+		            	<p className="mt-4">Party Trick: I’d be the guy to solve the random Rubix cube laying around. </p>
+		            	
+		            	<p className="mt-4">Guiltiest pleasure: Binge playing some new video game I shouldn’t have bought. </p>
+		            	
+		            	<p className="mt-4">PPick your poison: Cookie Dough. </p>
+		            	
+		            	<p className="mt-4">Voted most likely to: Not get the joke. </p>
+		            	
 		   			</CardBlock>
 		   		</Card>
         	</Element>
